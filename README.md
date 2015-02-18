@@ -116,7 +116,9 @@ Adds the following plugins:
 
 #### Installing composer:
 
-using Brew:
+[getcomposer.org Installation](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
+
+or using Brew on Mac:
 
     brew update
     brew tap homebrew/homebrew-php
