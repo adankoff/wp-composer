@@ -1,11 +1,23 @@
-# Build and Release Folders
-bin/
-bin-debug/
-bin-release/
+vendor
+public_html/*.php
+public_html/*.txt
+public_html/*.html
 
-# Other files and folders
-.settings/
+public_html/wp-admin
+public_html/wp-includes
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+public_html/wp-content/plugins
+public_html/wp-content/uploads
+public_html/wp-content/index.php
+
+public_html/wp-content/themes/index.php
+public_html/wp-content/themes/twentyten
+public_html/wp-content/themes/twentyeleven
+public_html/wp-content/themes/twentytwelve
+public_html/wp-content/themes/twentythirteen
+public_html/wp-content/themes/twentyfourteen
+
+composer.phar
+composer.lock
+.DS_Store
+Thumbs.db
