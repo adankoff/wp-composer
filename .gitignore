@@ -17,7 +17,7 @@ public_html/wp-content/themes/twentyten
 public_html/wp-content/themes/twentyeleven
 public_html/wp-content/themes/twentytwelve
 public_html/wp-content/themes/twentythirteen
-public_html/wp-content/themes/twentyfourteen
+# public_html/wp-content/themes/twentyfourteen
 
 composer.phar
 composer.lock
