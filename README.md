@@ -23,51 +23,51 @@ Adds the following plugins:
 
 ## No plugins or themes
 
-{
-  "repositories": [
     {
-      "type": "composer",
-      "url": "http://wpackagist.org"
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "wordpress/wordpress",
-        "type": "webroot",
-        "version": "4.1",
-        "source": {
-          "type": "git",
-          "url": "https://github.com/WordPress/WordPress.git",
-          "reference": "4.1"
+      "repositories": [
+        {
+          "type": "composer",
+          "url": "http://wpackagist.org"
         },
-        "require": {
-          "fancyguy/webroot-installer": "1.0.0"
+        {
+          "type": "package",
+          "package": {
+            "name": "wordpress/wordpress",
+            "type": "webroot",
+            "version": "4.1",
+            "source": {
+              "type": "git",
+              "url": "https://github.com/WordPress/WordPress.git",
+              "reference": "4.1"
+            },
+            "require": {
+              "fancyguy/webroot-installer": "1.0.0"
+            }
+          }
         }
+      ],
+      "require": {
+        "php": ">=5.3.0",
+        "wordpress/wordpress": ">=4.1"
+      },
+      "extra": {
+        "installer-paths": {
+            "public_html/wp-content/themes/{$name}/": ["type:wordpress-theme"],
+            "public_html/wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
+        },
+        "webroot-dir": "public_html/wp",
+        "webroot-package": "wordpress/wordpress"
+      },
+      "scripts": {
+          "post-install-cmd": [
+            "cp public_html/wp-config-sample.php public_html/wp-config.php"
+          ]
       }
     }
-  ],
-  "require": {
-    "php": ">=5.3.0",
-    "wordpress/wordpress": ">=4.1"
-  },
-  "extra": {
-    "installer-paths": {
-        "public_html/wp-content/themes/{$name}/": ["type:wordpress-theme"],
-        "public_html/wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
-    },
-    "webroot-dir": "public_html/wp",
-    "webroot-package": "wordpress/wordpress"
-  },
-  "scripts": {
-      "post-install-cmd": [
-        "cp public_html/wp-config-sample.php public_html/wp-config.php"
-      ]
-  }
-}
 
 
-## How to add themes using a zip
- ,
+## How to add themes using a github zip
+
     {
       "type": "package",
       "package": {
@@ -87,20 +87,20 @@ Adds the following plugins:
 
 ## How to add from from private bitbucket
 
- {
-    "require": {
-        "username/reponame": "dev-master"
-    },
-    "repositories": [
         {
-            "type": "vcs",
-            "url":  "git@bitbucket.org:username/reponame.git"
-        }
-    ]
-}
+        "require": {
+            "username/reponame": "dev-master"
+        },
+        "repositories": [
+            {
+                "type": "vcs",
+                "url":  "git@bitbucket.org:username/reponame.git"
+            }
+        ]
+    }
 
-## How to add from from private bitbucket
-,
+## How to add from from git
+
     {
       "type": "package",
       "package": {
@@ -124,34 +124,3 @@ using Brew:
     brew tap homebrew/versions
     brew install php55-intl php55-mcrypt
     brew install homebrew/php/composer
-
-### Front End Setup
-
-#### Install yeoman, grunt and bower
-
-    npm install yo
-
-#### Install compass
-
-    gem update --system
-    gem install compass
-
-#### Standard Vhosts:
-
-Add to your /etc/hosts file:
-
-    sudo nano /etc/hosts
-    127.0.0.1 sitename.local
-
-Add to your vhosts file where "repo-name" is the name of your repo and "username" the name of your home folder:
-
-    nano /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
-
-    <VirtualHost *:80>
-        DocumentRoot /Users/username/www/repo-name/public_html
-        ServerName protecteur-widget.local
-        <Directory "/Users/username/www/repo-name/public_html">
-            Header add Access-Control-Allow-Origin "*"
-        </Directory>
-    </VirtualHost>
-
