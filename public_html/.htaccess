@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 65fa7fa35a8fadc7f0b0d5fdc1d4ad796ec17272
 # BEGIN WordPress
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
@@ -11,8 +8,5 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
-<<<<<<< HEAD
 
-=======
->>>>>>> 65fa7fa35a8fadc7f0b0d5fdc1d4ad796ec17272
 # END WordPress
