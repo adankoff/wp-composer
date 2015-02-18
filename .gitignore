@@ -2,6 +2,8 @@ vendor
 public_html/*.php
 public_html/*.txt
 public_html/*.html
+!public_html/index.php
+!public_html/wp-config-sample.php
 
 public_html/wp-admin
 public_html/wp-includes
